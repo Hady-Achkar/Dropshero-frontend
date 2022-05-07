@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f4dd2bd2.css",
+    "main.js": "/static/js/main.0bdeb467.js",
+    "static/media/facebook.png": "/static/media/facebook.4ae1fe6fcf276ab30f01.png",
+    "static/media/logo.jpeg": "/static/media/logo.fe3c2f7a0bd386903576.jpeg",
+    "static/media/wordpresss.png": "/static/media/wordpresss.785a0cf71f1e7de1ee9c.png",
+    "static/media/amazonn.png": "/static/media/amazonn.a6d2987216e4d7367605.png",
+    "static/media/american-express-svgrepo-com.svg": "/static/media/american-express-svgrepo-com.f094ecf9a252fe0c243b9de2fdbdcd49.svg",
+    "static/media/master.svg": "/static/media/master.b39bbc2de112a4f90763bd31355d5d1a.svg",
+    "index.html": "/index.html",
+    "main.f4dd2bd2.css.map": "/static/css/main.f4dd2bd2.css.map",
+    "main.0bdeb467.js.map": "/static/js/main.0bdeb467.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4dd2bd2.css",
+    "static/js/main.0bdeb467.js"
+  ]
+}

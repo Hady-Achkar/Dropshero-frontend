@@ -1,0 +1,6 @@
+export {default as Cta} from './Cta'
+export {default as VideoSection} from './VideoSection'
+export {default as ContentSection} from './ContentSection'
+export {default as Testimonials} from './Testimonials'
+export {default as Faqs} from './Faqs'
+export {default as LogoClound} from './LogoCloud'
