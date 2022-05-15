@@ -20,6 +20,7 @@ import {
 	ThankYouPage,
 	ThankYouUpgrade,
 	Privacy,
+	InfluencersPage,
 } from '../pages'
 import Route from './route'
 
@@ -164,6 +165,13 @@ const routesConfiguration: IRoutesConfiguration[] = [
 		exact: true,
 		isPrivate: true,
 		component: ThankYouUpgrade,
+		allowedAccess: 'ALL',
+	},
+	{
+		path: '/influencers',
+		exact: true,
+		isPrivate: false,
+		component: InfluencersPage,
 		allowedAccess: 'ALL',
 	},
 ]
