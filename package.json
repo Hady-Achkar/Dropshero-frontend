@@ -5,7 +5,7 @@
 	"dependencies": {
 		"@emotion/react": "^11.7.1",
 		"@emotion/styled": "^11.6.0",
-		"@headlessui/react": "^1.4.2",
+		"@headlessui/react": "^1.6.1",
 		"@heroicons/react": "^1.0.5",
 		"@mui/material": "^5.2.5",
 		"@sentry/browser": "^6.17.7",

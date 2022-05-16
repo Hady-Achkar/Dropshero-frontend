@@ -123,7 +123,12 @@ const Index = () => {
 									<div className="max-w-sm w-full lg:max-w-full lg:flex space-y-3 shadow shadow-gray-200 mx-auto bg-slate-50">
 										<div
 											className="h-48 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-r text-center overflow-hidden cursor-pointer"
-											style={{backgroundImage: `url('${product?.thumbnail}')`}}
+											style={{
+												backgroundImage: `url('${product?.thumbnail}')`,
+												backgroundSize: '100%',
+												backgroundPosition: 'center',
+												backgroundRepeat: 'no-repeat',
+											}}
 											title="Woman holding a mug"
 											onClick={() =>
 												history.push(
@@ -198,7 +203,7 @@ const Index = () => {
 													</p>
 												</div>
 
-												<div className="text-gray-800 font-medium text-md my-2 truncate">
+												<div className="text-gray-800 font-medium text-md my-2">
 													{product?.title}
 												</div>
 												<div className="space-y-2">
