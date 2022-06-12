@@ -72,14 +72,16 @@ const Index = () => {
 											</div>
 										)}
 										{status === AccountStatus.VERIFIED && (
-											<a
-												href={'https://dropshero.getrewardful.com/signup'}
-												target="_blank"
-												className="font-medium text-lgtext-gray-500 hover:text-gray-900 mx-4 underline"
-												rel="noreferrer"
-											>
-												برنامج الافلييت
-											</a>
+											<Fragment>
+												<a
+													href={'https://dropshero.getrewardful.com/signup'}
+													target="_blank"
+													className="font-medium text-lgtext-gray-500 hover:text-gray-900 mx-4 underline"
+													rel="noreferrer"
+												>
+													برنامج الافلييت
+												</a>
+											</Fragment>
 										)}
 									</div>
 
@@ -106,14 +108,16 @@ const Index = () => {
 											المنتجات
 										</Link>
 										{status === AccountStatus.VERIFIED && (
-											<a
-												href={'https://dropshero.getrewardful.com/signup'}
-												target="_blank"
-												className="font-medium text-lgtext-gray-500 hover:text-gray-900 mx-4 underline"
-												rel="noreferrer"
-											>
-												انضم لبرنامج الافلييت
-											</a>
+											<Fragment>
+												<a
+													href={'https://dropshero.getrewardful.com/signup'}
+													target="_blank"
+													className="font-medium text-lgtext-gray-500 hover:text-gray-900 mx-4 underline"
+													rel="noreferrer"
+												>
+													انضم لبرنامج الافلييت
+												</a>
+											</Fragment>
 										)}
 
 										{status === AccountStatus.NOT_VERIFIED && (
@@ -157,6 +161,14 @@ const Index = () => {
 								>
 									تواصل معنا عبر وتساب
 								</a>
+								{isAuthenticated && AccountStatus.VERIFIED && (
+									<Link
+										to={'influencers'}
+										className="font-medium text-lgtext-gray-500 hover:text-gray-900 mx-4 underline"
+									>
+										 قائمة المؤثرين
+									</Link>
+								)}
 							</div>
 							<div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
 								{isAuthenticated ? (
@@ -311,6 +323,14 @@ const Index = () => {
 									>
 										تواصل معنا عبر وتساب
 									</a>
+									{status === AccountStatus.VERIFIED && (
+										<Link
+											to="/influencers"
+											className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+										>
+											قائمة المؤثرين
+										</Link>
+									)}
 								</div>
 								{!isAuthenticated ? (
 									<Fragment>
@@ -330,13 +350,15 @@ const Index = () => {
 								) : (
 									<>
 										{status === AccountStatus.VERIFIED && (
-											<Link
-												className="inline-flex items-center space-x-2 justify-center w-full px-5 py-2 text-center font-medium bg-red-500 text-gray-200 hover:opacity-90"
-												to="/favs"
-											>
-												قائمة المفضلات
-												<HeartIcon className="w-4 h-4 " />
-											</Link>
+											<div className="px-2 pb-3">
+												<Link
+													className="inline-flex items-center space-x-2 justify-center w-full px-5 py-2 text-center font-medium bg-red-500 text-gray-200 hover:opacity-90"
+													to="/favs"
+												>
+													قائمة المفضلات
+													<HeartIcon className="w-4 h-4 " />
+												</Link>
+											</div>
 										)}
 										{bundleType === BundleType.MONTHLY && (
 											<div>
