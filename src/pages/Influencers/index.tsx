@@ -96,7 +96,6 @@ const Index = () => {
 		'500K-999K',
 		'<1M',
 	]
-	const [open, setOpen] = useState<boolean>(false)
 	return (
 		<div lang="en">
 			<Header />
@@ -396,22 +395,6 @@ const Index = () => {
 																</a>
 															)}
 														</div>
-													</td>
-													<td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-														<button
-															onClick={() => setOpen(true)}
-															className="text-green-600 hover:text-green-900"
-														>
-															View Details
-															<span className="sr-only">
-																, {item.channelName}
-															</span>
-														</button>
-														<DescriptionModal
-															open={open}
-															setOpen={setOpen}
-															description={item?.description}
-														/>
 													</td>
 												</tr>
 											))}
