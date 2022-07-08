@@ -32,7 +32,7 @@ const Signin = () => {
             event.preventDefault()
             // dispatch(startLogin(userData))
             const {email, password} = userData
-            login(email, password)
+            login(email.toLowerCase(), password)
                 .then((res) => {
                     const {
                         token,
