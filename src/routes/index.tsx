@@ -21,6 +21,7 @@ import {
 	ThankYouUpgrade,
 	Privacy,
 	InfluencersPage,
+	Maintenance,
 } from '../pages'
 import Route from './route'
 
@@ -172,6 +173,13 @@ const routesConfiguration: IRoutesConfiguration[] = [
 		exact: true,
 		isPrivate: false,
 		component: InfluencersPage,
+		allowedAccess: 'ALL',
+	},
+	{
+		path: '/maintenance',
+		exact: true,
+		isPrivate: false,
+		component: Maintenance,
 		allowedAccess: 'ALL',
 	},
 ]
