@@ -58,6 +58,7 @@ const App: React.FC = () => {
 	useEffect(() => {
 		TagManager.initialize({gtmId: 'GTM-PGVJPQG'})
 	}, [])
+
 	return <Routes />
 }
 

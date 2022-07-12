@@ -1,9 +1,9 @@
 import {useDispatch, useSelector} from 'react-redux'
 import {AppState} from '../../reducers'
 
-import React, {Fragment, useState} from 'react'
+import React, {Fragment, useEffect, useState} from 'react'
 import {Popover, Transition, Menu} from '@headlessui/react'
-import {Link} from 'react-router-dom'
+import {Link, useHistory, useLocation} from 'react-router-dom'
 import {logoutAction} from '../../actions'
 import {ChevronDownIcon, MenuIcon, XIcon} from '@heroicons/react/solid'
 import classNames from 'classnames'
@@ -26,6 +26,7 @@ const navigation = [
 ]
 
 const Index = () => {
+	const location = useLocation()
 	const {
 		isAuthenticated,
 		user: {status, email, bundleType, activeSubscription},
@@ -37,6 +38,14 @@ const Index = () => {
 		dispatch(logoutAction())
 		setOpen(false)
 	}
+
+	const history = useHistory()
+
+	useEffect(() => {
+		if (!isAuthenticated) {
+			history.push('/maintenance')
+		}
+	}, [location])
 
 	return (
 		<Fragment>
